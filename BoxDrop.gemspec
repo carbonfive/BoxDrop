@@ -23,4 +23,6 @@ Gem::Specification.new do |s|
   # s.add_runtime_dependency "rest-client"
 
   s.add_runtime_dependency "dropbox-sdk"
+  
+  s.add_development_dependency "rspec"
 end
