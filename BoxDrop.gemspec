@@ -7,9 +7,9 @@ Gem::Specification.new do |s|
   s.version     = BoxDrop::VERSION
   s.authors     = ["Jonah Williams"]
   s.email       = ["jonah@carbonfive.com"]
-  s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.homepage    = "www.carbonfive.com"
+  s.summary     = %q{Upload file to Dropbox}
+  s.description = %q{Given a dropbox oauth app key and secret authenticate a dropbox account to use the app. Given a token and secret authenticating a given user using that app upload files to the user's Dropbox account.}
 
   s.rubyforge_project = "BoxDrop"
 
