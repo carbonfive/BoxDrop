@@ -13,33 +13,51 @@ describe BoxDrop do
   end
   
   describe "upload a file" do
-    context "given an invalid local path" do
-      it "returns an error code"
-      it "outputs an error message"
+    context "given access credentials" do
+      context "given an invalid local path" do
+        it "returns an error code"
+        it "outputs an error message"
+      end
+      context "given a valid local path" do
+        context "given a non-existant remote path" do
+          it "returns an error code"
+          it "outputs an error message"
+        end
+        context "given a relative path which leaves dropbox" do
+          it "returns an error code"
+          it "outputs an error message"
+        end
+        context "given a valid remote path" do
+          context "when the upload succeeds" do
+            it "returns success"
+          end
+          context "when the upload fails" do
+            context "and the user is unauthorized" do
+              it "returns an error code"
+              it "outputs an error message"
+            end
+            context "and error occurred" do
+              it "returns an error code"
+              it "outputs an error message"
+            end
+          end
+        end
+      end
     end
-    context "given a valid local path" do
-      context "given a non-existant remote path" do
+    context "when authentication is required" do
+      context "when in interactive mode" do
+        it "prompts for authentication"
+        context "when authenticated" do
+          it "uploads the file"
+        end
+        context "when authentication fails" do
+          it "returns an error code"
+          it "outputs an error message"
+        end
+      end
+      context "when not in interactive mode" do
         it "returns an error code"
         it "outputs an error message"
-      end
-      context "given a relative path which leaves dropbox" do
-        it "returns an error code"
-        it "outputs an error message"
-      end
-      context "given a valid remote path" do
-        context "when the upload succeeds" do
-          it "returns success"
-        end
-        context "when the upload fails" do
-          context "and the user is unauthorized" do
-            it "returns an error code"
-            it "outputs an error message"
-          end
-          context "and error occurred" do
-            it "returns an error code"
-            it "outputs an error message"
-          end
-        end
       end
     end
   end
