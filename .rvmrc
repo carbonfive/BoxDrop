@@ -1,1 +1,1 @@
-use ruby-1.9.2@boxdrop --create
+rvm use ruby-1.9.2-p290@boxdrop --create
